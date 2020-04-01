@@ -56,8 +56,26 @@ function Example4() {
   )
 }
 
+function Example5() {
+  /*
+  && 연산자로 조건부 렌더링을 할 수 있는 이유는 리액트에서 false를 렌더링할 때는 null과 똑같이 인식하지만
+  falsy한 값인 0은 예외적으로 화면에 나타남
+  */
+  const number = 0;
+  return number && <div>내용</div>;
+}
+
+function Example6() {
+  /*
+  어떤 값이 undefined일 수도 있다면 OR연산자를 사용해서 오류를 방지할 수 있음
+  */
+  const name = undefined;
+
+  return name || '값이 undefined 입니다.';
+}
+
 function App() {
-    return <Example4/>;
+    return <Example6/>;
 }
 
 export default App;
