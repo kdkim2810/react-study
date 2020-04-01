@@ -1,19 +1,16 @@
 import React from 'react'; // 리액트를 불러오는 구문
-// import logo from './logo.svg';
-// import './App.css';
+
+function Example1() {
+  return (
+    <>
+      <h1>리액트 안녕!</h1>
+      <h2>잘 작동하니?</h2>
+    </>
+  )
+}
 
 function App() {
-    const name = '리액트';
-
-    return (
-      <div>
-        {name === '리액트' ? (
-          <h1>리액트입니다.</h1>
-        ) : (
-          <h2>리액트가 아닙니다.</h2>
-        )}
-      </div>
-    );
+    return <Example1/>;
 }
 
 export default App;
