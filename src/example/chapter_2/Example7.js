@@ -7,5 +7,5 @@ export default function Example7() {
     */
   const name = undefined;
 
-  return <div>{name || "리액트"}</div>;
+  return <div>{name || '리액트'}</div>;
 }

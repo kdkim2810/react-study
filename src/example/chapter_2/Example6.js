@@ -4,5 +4,5 @@ export default function Example6() {
     */
   const name = undefined;
 
-  return name || "값이 undefined 입니다.";
+  return name || '값이 undefined 입니다.';
 }
