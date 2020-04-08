@@ -1,5 +1,5 @@
-import MyComponentTest from './MyComponentTest';
+import MyComponent from './MyComponent';
 
 export default {
-  MyComponentTest,
+  MyComponent,
 };
