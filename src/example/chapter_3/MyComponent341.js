@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-  /*
-  컴포넌트가 생성되었을 때 실행되는 생성자 메소드
-  클래스형 컴포넌트에서는 super(props)를 반드시 호출
-  */
-  constructor(props) {
-    super(props);
-    // state의 초기값 설정
-    this.state = {
-      number: 0,
-      fixedNumber: 0,
-    };
+  state = {
+    number: 0,
+    fixedNumber: 0
   }
 
   render() {
@@ -25,7 +17,16 @@ class Counter extends Component {
           // onClick을 통해 버튼이 클릭되었을 때 호출될 함수를 지정
           onClick={() => {
             // this.setState를 사용하여 state에 새로운 값을 지정할 수 있음
-            this.setState({ number: number + 1 });
+            this.setState(prevState => {
+              return {
+                number: prevState.number + 1
+              }
+            });
+            /* 
+            위의 setState와 아래의 setState는 똑같은 기능을 하며
+            아래 코드는 함수에서 바로 객체를 반환함
+            */
+            this.setState(prevState => ({number: prevState.number + 1}));
           }}
         >
           +1
