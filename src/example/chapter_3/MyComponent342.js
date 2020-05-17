@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const Say = () => {
-  // useState 사용 시, state의 초기값 형태를 자유롭게 넣으 수 있음
+  // useState 사용 시, state의 초기값 형태를 자유롭게 넣을 수 있음
   const [message, setMessage] = useState('');
   const [color, setColor] = useState('black');
 
