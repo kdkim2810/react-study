@@ -14,7 +14,23 @@ const MyComponent = ({ name, children }) => (
   </div>
 );
 
-
+/*
+propTypes 종류
+array : 배열
+arrayOf(PropType) : 특정 PropType으로 이루어진 배열을 의미함 ex) arrayOf(PropTypes.string) 문자열로 이루어진 배열
+bool : true OR false
+func: 함수
+number: 숫자
+object: 객체
+string: 문자열
+symbol: ES6의 Symbol
+node: 렌더링할 수 있는 모든 것
+instanceOf(클래스): 특정 클래스의 인스턴스
+oneOf( [ 'dog', 'cat' ] ): 주어진 배열 요소 중 값 하나
+objectOf( React.PropTypes.number ) : 객체의 모든 키 값이 인자로 주어진 PropType인 객체
+shape: ({ name: PropTypes.string, num: PropTypes.number }) : 주어진 스키마를 가진 객체
+any: 아무 종류
+*/
 MyComponent.propTypes = {
   name: PropTypes.string,
   children: PropTypes.element.isRequired,
