@@ -21,6 +21,9 @@ class Counter extends Component {
               return {
                 number: prevState.number + 1
               }
+            }, () => {
+              console.log('방금 setState가 호출되었습니다.');
+              console.log(this.state);
             });
             /* 
             위의 setState와 아래의 setState는 똑같은 기능을 하며
