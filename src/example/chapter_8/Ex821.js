@@ -21,6 +21,13 @@ const Info = () => {
     console.log('마운트 될때만 실행합니다.');
   }, []);
 
+  /**
+   * 두번째 파라미터로 전달되는 배열 안에 있는 값이 바뀔때만 동작하는 useEffect
+   */
+  useEffect(() => {
+    console.log('업데이트 될때만 실행합니다.');
+  }, [name]);
+
   const onChangeName = (e) => {
     setName(e.target.value);
   };
