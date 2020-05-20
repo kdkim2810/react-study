@@ -11,6 +11,14 @@ const Info = () => {
       name,
       nickName,
     );
+    /**
+     * 컴포넌트가 언마운트 되기 전이나 업데이트 되기 직전에 어떠한 작업을 수행하고 싶다면
+     * useEffect에서 cleanup 함수를 반환해 주어야 함
+     */
+    return () => {
+      console.log('cleanup');
+      console.log(name);
+    };
   });
 
   /**
@@ -26,6 +34,11 @@ const Info = () => {
    */
   useEffect(() => {
     console.log('업데이트 될때만 실행합니다.');
+
+    return () => {
+      console.log('cleanup');
+      console.log(name);
+    };
   }, [name]);
 
   const onChangeName = (e) => {
