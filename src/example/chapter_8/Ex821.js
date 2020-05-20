@@ -13,6 +13,14 @@ const Info = () => {
     );
   });
 
+  /**
+   * 마운트 될때만 동작하는 useEffect
+   * 업데이트될때는 실행하지 않으려면 함수의 두번째 파라미터로 비어있는 배열을 넣어주면 됨(componentDidMount의 역할만 수행)
+   */
+  useEffect(() => {
+    console.log('마운트 될때만 실행합니다.');
+  }, []);
+
   const onChangeName = (e) => {
     setName(e.target.value);
   };
